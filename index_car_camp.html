@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>עוד רגע… מצטרפים לקבוצת Car & Camp</title>
+
+  <!-- הפניה אוטומטית גם בלי JS -->
+  <meta http-equiv="refresh" content="7; url=https://linkly.link/2DKDf">
+
+  <!-- שיתוף + מניעת אינדוקס -->
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:title" content="מצטרפים לקבוצת Car & Camp">
+  <meta property="og:description" content="עוד רגע ואתם בפנים. אם לא הופניתם אוטומטית—לחצו להצטרפות.">
+  <meta property="og:type" content="website">
+
+  <!-- טעינה מוקדמת של הלוגו לשיפור מהירות התצוגה -->
+  <link rel="preload" as="image" href="./CAR001.png" imagesizes="(max-width: 800px) 70vw, 320px">
+
+  <style>
+    :root{
+      --bg:#0b0e13; --text:#ecf3fb; --muted:#a7bed6;
+      --accent:#ff2e2e; --accent2:#ff6b6b; --cta:#00e0a4; --cta2:#00b98b;
+      --glass: rgba(10,16,25,.65);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--text);
+      font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+      /* גרדיאנטים כהים נעימים כרקע ברירת מחדל */
+      background:
+        radial-gradient(1000px 600px at 80% -10%, #122033 0%, #0b0e13 55%),
+        radial-gradient(1000px 600px at 10% 110%, #1b2a40 0%, #0b0e13 60%);
+      background-attachment: fixed;
+      display:grid; place-items:center;
+      padding:24px;
+    }
+    /* אם תוסיפו קובץ 00.jpg לתיקייה, בטלו את ההערה הבאה כדי להשתמש בו כרקע:
+    body{ background-image:
+            radial-gradient(1000px 600px at 80% -10%, rgba(8,20,32,.7) 0%, rgba(11,14,19,.92) 55%),
+            radial-gradient(1000px 600px at 10% 110%, rgba(13,28,48,.8) 0%, rgba(11,14,19,.94) 60%),
+            url("./00.jpg");
+          background-size:cover; background-position:center; } */
+
+    .card{
+      width:min(780px,94vw);
+      background:var(--glass);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:22px; padding:28px 22px; text-align:center;
+      backdrop-filter: blur(8px);
+      box-shadow:0 10px 40px rgba(0,0,0,.35);
+    }
+
+    .logo{
+      width:min(320px, 70%);
+      height:auto;
+      display:block;
+      margin:0 auto 18px;
+      filter: drop-shadow(0 6px 24px rgba(0,0,0,.45));
+    }
+
+    .nowrap{ white-space:nowrap; }
+
+    h1{ margin:0 0 10px; font-size:clamp(24px, 2.6vw + 12px, 40px); }
+    h2{ margin:0 0 18px; font-weight:600; font-size:clamp(16px, 1.4vw + 10px, 22px); color:#ffbdbd; }
+    p{ margin:6px 0 0; color:var(--muted); line-height:1.6 }
+
+    .spinner{
+      width:34px; height:34px;
+      border:3px solid rgba(255,255,255,.18);
+      border-top-color:#ff4c4c; border-radius:50%;
+      margin:16px auto 10px; animation:spin 1s linear infinite;
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .progress{
+      margin:12px auto 6px;
+      width:min(320px, 70%);
+      height:10px; border-radius:999px;
+      background:rgba(255,255,255,.10);
+      overflow:hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+    }
+    .bar{
+      height:100%; width:0%;
+      background:linear-gradient(90deg, var(--accent), var(--accent2));
+      transition:width .25s ease;
+    }
+    .count{ margin-top:6px; font-size:1rem; color:#eaeff6; }
+
+    .btn{
+      display:inline-block; margin-top:16px; padding:12px 18px; border-radius:12px;
+      background:linear-gradient(180deg, var(--cta), var(--cta2));
+      color:#051318; font-weight:800; text-decoration:none;
+      box-shadow:0 8px 24px rgba(0,224,164,.35);
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow:0 10px 30px rgba(0,224,164,.45); }
+
+    .link { display:block; margin-top:10px; color:#a7f0de; text-decoration:underline; font-weight:600 }
+
+    .tips{ margin-top:14px; font-size:.92rem; color:#9cb6cd }
+
+    @media (max-width: 480px){
+      .card{ padding:22px 16px; border-radius:16px; }
+      .logo{ width:72%; margin-bottom:14px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-live="polite">
+    <!-- לוגו (ודאו שקובץ CAR001.png נמצא באותה תיקייה) -->
+    <img class="logo" src="./CAR001.png" alt="Car &amp; Camp">
+
+    <h1>עוד רגע… מצטרפים לקבוצת <span class="nowrap">Car &amp; Camp</span></h1>
+    <h2>דילים שווים לאוהבי הרכב וחובבי הפנאי והשטח</h2>
+
+    <div class="spinner" aria-hidden="true"></div>
+
+    <div class="progress" aria-label="התקדמות ההפניה">
+      <div id="bar" class="bar"></div>
+    </div>
+    <p class="count">מעבר לקבוצת ה־WhatsApp בעוד <span id="sec">7</span> שניות…</p>
+
+    <a id="cta" class="btn" href="https://linkly.link/2DKDf" rel="nofollow noopener">כניסה מידית לקבוצה</a>
+    <a class="link" href="https://linkly.link/2DKDf" rel="nofollow noopener">הקישור לא עבד? לחצו כאן</a>
+
+    <p class="tips">אין JavaScript? תהיה הפניה גם ללא JS (דרך meta refresh), או לחצו על הכפתור.</p>
+  </main>
+
+  <script>
+    const url = "https://linkly.link/2DKDf"; // כתובת ההפניה
+    const total = 7;                          // משך הספירה בשניות
+    let left = total;
+
+    const sec = document.getElementById("sec");
+    const bar = document.getElementById("bar");
+    const cta = document.getElementById("cta");
+
+    sec.textContent = total;
+    bar.style.width = "0%";
+
+    const interval = setInterval(() => {
+      left--;
+      sec.textContent = left;
+      const pct = ((total - left) / total) * 100;
+      bar.style.width = pct + "%";
+      if (left <= 0) {
+        clearInterval(interval);
+        window.location.replace(url);
+      }
+    }, 1000);
+
+    // אם לוחצים ידנית—לא צריך להמתין
+    cta.addEventListener("click", () => clearInterval(interval), { once:true });
+  </script>
+
+  <noscript>
+    <p style="text-align:center; color:#c5d9ee; margin-top:8px">
+      JavaScript כבוי — תתבצע הפניה אוטומטית תוך מספר שניות (meta refresh), או לחצו על הכפתור למעלה.
+    </p>
+  </noscript>
+</body>
+</html>
